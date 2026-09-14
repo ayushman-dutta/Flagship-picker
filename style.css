@@ -1,0 +1,1487 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --purple-dark: #17051d;
+    --purple-deep: #220728;
+    --purple: #3d0c45;
+    --purple-mid: #591260;
+    --purple-light: #761d80;
+
+    --yellow: #ffdc55;
+    --yellow-light: #f5e8ad;
+    --cream: #fff5d4;
+
+}
+
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+body {
+
+    overflow: hidden;
+
+    color: var(--cream);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(135, 27, 148, .45),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(111, 20, 124, .35),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            120deg,
+            #19051f,
+            #4e0f57 48%,
+            #200627
+        );
+
+}
+
+
+
+/* =====================================================
+   BACKGROUND TEXTURE
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    opacity: .12;
+
+    background:
+
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 4px,
+            rgba(255,255,255,.07) 5px,
+            transparent 6px 14px
+        ),
+
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,.1) 0 2px,
+            transparent 3px 8px
+        );
+
+}
+
+
+.noise {
+
+    position: fixed;
+
+    inset: -50%;
+
+    pointer-events: none;
+
+    z-index: 51;
+
+    opacity: .08;
+
+    background-image:
+
+        url(
+            "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+        );
+
+}
+
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.page {
+
+    width: min(1450px, 94vw);
+
+    height: 100vh;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        38% 62%;
+
+    gap: 30px;
+
+}
+
+
+
+/* =====================================================
+   LEFT INTRO
+===================================================== */
+
+.intro {
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.intro-content {
+
+    width: 100%;
+
+    padding-left: 20px;
+
+}
+
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(
+            48px,
+            5vw,
+            72px
+        );
+
+    line-height: .8;
+
+    letter-spacing: 2px;
+
+    color: var(--yellow-light);
+
+}
+
+
+.presents {
+
+    margin-top: 7px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            21px,
+            2vw,
+            28px
+        );
+
+}
+
+
+
+/* =====================================================
+   PITCH PERFECT
+===================================================== */
+
+.title {
+
+    margin-top: 22px;
+
+}
+
+
+.title h1 {
+
+    position: relative;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(
+            75px,
+            9vw,
+            135px
+        );
+
+    font-weight: 400;
+
+    line-height: .7;
+
+    letter-spacing: 2px;
+
+    color: var(--yellow);
+
+    transform: scaleX(.9);
+
+    transform-origin: left center;
+
+    text-shadow:
+
+        2px 0 #ffe87c,
+
+        -2px 0 #d9aa30,
+
+        0 5px 0 rgba(0,0,0,.3);
+
+}
+
+
+.title h1 + h1 {
+
+    margin-top: 17px;
+
+}
+
+
+
+/* =====================================================
+   GLITCH
+===================================================== */
+
+.title h1::before {
+
+    content: attr(data-text);
+
+    position: absolute;
+
+    inset: 0;
+
+    color: #fff09a;
+
+    clip-path:
+        polygon(
+            0 15%,
+            100% 15%,
+            100% 29%,
+            0 29%
+        );
+
+    transform:
+        translateX(8px);
+
+    animation:
+        glitchOne 3s infinite steps(1);
+
+}
+
+
+.title h1::after {
+
+    content: attr(data-text);
+
+    position: absolute;
+
+    inset: 0;
+
+    color: #d5a52b;
+
+    clip-path:
+        polygon(
+            0 58%,
+            100% 58%,
+            100% 70%,
+            0 70%
+        );
+
+    transform:
+        translateX(-8px);
+
+    animation:
+        glitchTwo 2.6s infinite steps(1);
+
+}
+
+
+@keyframes glitchOne {
+
+    0%,
+    85%,
+    100% {
+        transform:
+            translateX(8px);
+    }
+
+    87% {
+        transform:
+            translateX(-18px);
+    }
+
+    90% {
+        transform:
+            translateX(14px);
+    }
+
+}
+
+
+@keyframes glitchTwo {
+
+    0%,
+    75%,
+    100% {
+        transform:
+            translateX(-8px);
+    }
+
+    78% {
+        transform:
+            translateX(18px);
+    }
+
+    82% {
+        transform:
+            translateX(-14px);
+    }
+
+}
+
+
+
+/* =====================================================
+   TAGLINE
+===================================================== */
+
+.tagline {
+
+    max-width: 440px;
+
+    margin-top: 30px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            18px,
+            1.7vw,
+            23px
+        );
+
+    line-height: 1.2;
+
+}
+
+
+
+/* =====================================================
+   INSTRUCTION
+===================================================== */
+
+.instruction {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    max-width: 440px;
+
+    margin-top: 35px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid
+        rgba(255,220,85,.35);
+
+}
+
+
+.star {
+
+    color: var(--yellow);
+
+    font-size: 25px;
+
+}
+
+
+.instruction h2 {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    color: var(--yellow);
+
+}
+
+
+.instruction p {
+
+    margin-top: 4px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+}
+
+
+
+/* =====================================================
+   COUNTER
+===================================================== */
+
+.selected-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 28px;
+
+}
+
+
+.selected-info span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.selected-info strong {
+
+    color: var(--yellow);
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 30px;
+
+}
+
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+.reset-btn {
+
+    margin-top: 15px;
+
+    padding: 8px 18px;
+
+    border:
+        1px solid
+        var(--yellow);
+
+    background: transparent;
+
+    color: var(--yellow-light);
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.reset-btn:hover {
+
+    background: var(--yellow);
+
+    color: var(--purple-dark);
+
+}
+
+
+
+/* =====================================================
+   RIGHT PICKER
+===================================================== */
+
+.picker {
+
+    height: 100vh;
+
+    padding:
+        clamp(25px, 5vh, 55px)
+        0;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+/* =====================================================
+   PICKER HEADER
+===================================================== */
+
+.picker-header {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 15px;
+
+}
+
+
+.picker-header span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.picker-header h2 {
+
+    margin-top: 2px;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 31px;
+
+    font-weight: 400;
+
+    color: var(--yellow);
+
+}
+
+
+.picker-header p {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    opacity: .7;
+
+}
+
+
+
+/* =====================================================
+   CARD GRID
+===================================================== */
+
+.cards {
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding:
+        clamp(18px, 2vw, 28px);
+
+    border:
+        1.5px solid
+        rgba(255,220,85,.55);
+
+    border-radius: 8px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.06),
+            rgba(0,0,0,.22)
+        ),
+
+        rgba(20,4,27,.6);
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(0,0,0,.4),
+
+        inset 0 0 45px
+        rgba(0,0,0,.3);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    grid-template-rows:
+        repeat(4, 1fr);
+
+    gap:
+        clamp(
+            8px,
+            1vw,
+            14px
+        );
+
+}
+
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    cursor: pointer;
+
+    perspective: 1000px;
+
+}
+
+
+.card-inner {
+
+    position: absolute;
+
+    inset: 0;
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .7s
+        cubic-bezier(
+            .4,
+            .2,
+            .2,
+            1
+        );
+
+}
+
+
+.card.flipped .card-inner {
+
+    transform:
+        rotateY(180deg);
+
+}
+
+
+.card-front,
+.card-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 8px;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+}
+
+
+
+/* =====================================================
+   CARD FRONT
+===================================================== */
+
+.card-front {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border:
+        1.5px solid
+        var(--yellow);
+
+    background:
+
+        radial-gradient(
+            circle,
+            #57205e,
+            #250a2d 70%
+        );
+
+    box-shadow:
+
+        0 5px 12px
+        rgba(0,0,0,.35),
+
+        inset 0 0 0 3px
+        rgba(255,220,85,.06);
+
+}
+
+
+.card-front::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,220,85,.45);
+
+}
+
+
+.card-front::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 14%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: var(--yellow);
+
+    font-size: 20px;
+
+}
+
+
+.card-symbol {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--yellow);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+}
+
+
+.card-front span {
+
+    position: absolute;
+
+    color: var(--yellow);
+
+    font-size: 9px;
+
+}
+
+
+.top-left {
+    top: 5px;
+    left: 6px;
+}
+
+
+.top-right {
+    top: 5px;
+    right: 6px;
+}
+
+
+.bottom-left {
+    bottom: 5px;
+    left: 6px;
+}
+
+
+.bottom-right {
+    bottom: 5px;
+    right: 6px;
+}
+
+
+
+/* =====================================================
+   CARD BACK
+===================================================== */
+
+.card-back {
+
+    transform:
+        rotateY(180deg);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1.5px solid
+        var(--yellow);
+
+    background:
+
+        radial-gradient(
+            circle,
+            #8c287f,
+            #350e3d 72%
+        );
+
+}
+
+
+.number {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    color: var(--yellow);
+
+    font-size: 50px;
+
+}
+
+
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
+
+.card:not(.disabled):hover {
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+.card:not(.disabled):hover
+.card-front {
+
+    box-shadow:
+
+        0 15px 25px
+        rgba(0,0,0,.45),
+
+        0 0 20px
+        rgba(255,220,85,.3);
+
+}
+
+
+
+/* =====================================================
+   DISABLED CARD
+===================================================== */
+
+.card.disabled {
+
+    cursor: default;
+
+}
+
+
+.card.disabled .card-front {
+
+    cursor: not-allowed;
+
+}
+
+
+.card.disabled {
+
+    opacity: .55;
+
+}
+
+
+.card.disabled.selected {
+
+    opacity: 1;
+
+}
+
+
+
+/* =====================================================
+   EXPANDED CARD OVERLAY
+===================================================== */
+
+.card-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        rgba(10,2,14,.86);
+
+    backdrop-filter:
+        blur(12px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+
+}
+
+
+.card-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+
+/* =====================================================
+   EXPANDED CARD
+===================================================== */
+
+.expanded-card {
+
+    width: min(
+        430px,
+        88vw
+    );
+
+    max-height: 90vh;
+
+    overflow: hidden;
+
+    position: relative;
+
+    border:
+        2px solid
+        var(--yellow);
+
+    border-radius: 3%;
+
+    background:
+
+        linear-gradient(
+            150deg,
+            #5c145f,
+            #250829
+        );
+
+    box-shadow:
+
+        0 30px 100px
+        rgba(0,0,0,.65),
+
+        0 0 50px
+        rgba(255,220,85,.18);
+
+    transform:
+        scale(.55)
+        rotateY(20deg);
+
+    transition:
+        transform .55s
+        cubic-bezier(
+            .2,
+            .9,
+            .2,
+            1
+        );
+
+}
+
+
+.card-overlay.active
+.expanded-card {
+
+    transform:
+        scale(1)
+        rotateY(0);
+
+}
+
+
+
+/* =====================================================
+   CLOSE
+===================================================== */
+
+.close-card {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    z-index: 10;
+
+    width: 40px;
+
+    height: 40px;
+
+    border:
+        1px solid
+        rgba(255,220,85,.6);
+
+    border-radius: 50%;
+
+    background:
+        rgba(20,4,27,.7);
+
+    color: var(--yellow);
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =====================================================
+   EXPANDED NUMBER
+===================================================== */
+
+.expanded-number {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 18px;
+
+    left: 20px;
+
+    border-radius: 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 55px;
+
+    height: 55px;
+
+    border:
+        1px solid
+        var(--yellow);
+
+    background:
+        rgba(20,4,27,.72);
+
+}
+
+
+.expanded-number span {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 30px;
+
+    color: var(--yellow);
+
+}
+
+
+
+/* =====================================================
+   EXPANDED IMAGE
+===================================================== */
+
+.expanded-image {
+
+    width: 100%;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    background: #211025;
+
+}
+
+
+.expanded-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+
+/* =====================================================
+   EXPANDED TEXT
+===================================================== */
+
+.expanded-content {
+
+    padding:
+        22px 25px 28px;
+
+}
+
+
+.expanded-label {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: var(--yellow);
+
+}
+
+
+.expanded-content h2 {
+
+    margin-top: 5px;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    color: var(--yellow);
+
+    line-height: 1;
+
+}
+
+
+.expanded-content p {
+
+    margin-top: 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    line-height: 1.25;
+
+    color: var(--cream);
+
+}
+
+
+
+/* =====================================================
+   LOW HEIGHT LAPTOP
+===================================================== */
+
+@media(max-height:750px) {
+
+    .picker {
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+
+    .brand {
+
+        font-size: 50px;
+
+    }
+
+
+    .title {
+
+        margin-top: 14px;
+
+    }
+
+
+    .title h1 {
+
+        font-size: 78px;
+
+    }
+
+
+    .title h1 + h1 {
+
+        margin-top: 10px;
+
+    }
+
+
+    .tagline {
+
+        margin-top: 17px;
+
+        font-size: 18px;
+
+    }
+
+
+    .instruction {
+
+        margin-top: 20px;
+
+        padding-top: 15px;
+
+    }
+
+
+    .selected-info {
+
+        margin-top: 15px;
+
+    }
+
+
+    .cards {
+
+        padding: 14px;
+
+        gap: 7px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px) {
+
+    body {
+
+        overflow-y: auto;
+
+    }
+
+
+    .page {
+
+        height: auto;
+
+        min-height: 100vh;
+
+        display: block;
+
+    }
+
+
+    .intro {
+
+        height: auto;
+
+        padding:
+            30px 0 20px;
+
+    }
+
+
+    .intro-content {
+
+        padding-left: 0;
+
+        text-align: center;
+
+    }
+
+
+    .title h1 {
+
+        transform:
+            scaleX(.95);
+
+        transform-origin:
+            center;
+
+        font-size: 70px;
+
+    }
+
+
+    .tagline {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+    .instruction {
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+
+    }
+
+
+    .selected-info {
+
+        justify-content: center;
+
+    }
+
+
+    .picker {
+
+        height: 600px;
+
+        padding:
+            15px 0 30px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        grid-template-rows:
+            repeat(6, 1fr);
+
+    }
+
+
+    .expanded-card {
+
+        width: 88vw;
+
+    }
+
+
+    .expanded-image {
+
+        height: 230px;
+
+    }
+
+}

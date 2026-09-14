@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pitch Perfect | Flagship Foundry</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div class="noise"></div>
+
+
+    <main class="page">
+
+        <!-- =========================================
+             LEFT SIDE
+        ========================================== -->
+
+        <section class="intro">
+
+            <div class="intro-content">
+
+                <p class="brand">
+                    FLAGSHIP FOUNDRY
+                </p>
+
+                <p class="presents">
+                    presents
+                </p>
+
+
+                <div class="title">
+
+                    <h1 data-text="PITCH">
+                        PITCH
+                    </h1>
+
+                    <h1 data-text="PERFECT">
+                        PERFECT
+                    </h1>
+
+                </div>
+
+
+                <p class="tagline">
+                    ~where ordinary products meet
+                    extraordinary pitches.
+                </p>
+
+
+                <div class="instruction">
+
+                    <span class="star">
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            PICK YOUR CARD
+                        </h2>
+
+                        <p>
+                            Choose a card from the collection.
+                            <br>
+                            Flip it to reveal what's inside.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="selected-info">
+
+                    <span>
+                        CARDS CHOSEN
+                    </span>
+
+                    <strong id="selectedCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="reset-btn"
+                    id="resetBtn"
+                    type="button"
+                >
+                    RESET CARDS
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             RIGHT SIDE
+        ========================================== -->
+
+        <section class="picker">
+
+            <div class="picker-header">
+
+                <div>
+
+                    <span>
+                        THE COLLECTION
+                    </span>
+
+                    <h2>
+                        24 CARDS
+                    </h2>
+
+                </div>
+
+                <p>
+                    SELECT A CARD
+                </p>
+
+            </div>
+
+
+            <div
+                class="cards"
+                id="cardsContainer"
+            >
+                <!-- JavaScript creates cards -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         EXPANDED CARD
+    ========================================== -->
+
+    <div
+        class="card-overlay"
+        id="cardOverlay"
+    >
+
+        <div
+            class="expanded-card"
+            id="expandedCard"
+        >
+
+            <button
+                class="close-card"
+                id="closeCard"
+                type="button"
+                aria-label="Close card"
+            >
+                ×
+            </button>
+
+
+            <div class="expanded-number">
+                <span id="expandedNumber">
+                    01
+                </span>
+            </div>
+
+
+            <div class="expanded-image">
+
+                <img
+                    id="expandedImage"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <div class="expanded-content">
+
+                <span
+                    class="expanded-label"
+                    id="expandedLabel"
+                >
+                    CARD
+                </span>
+
+                <h2 id="expandedTitle">
+                    Product Name
+                </h2>
+
+                <p id="expandedText">
+                    Product description goes here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
