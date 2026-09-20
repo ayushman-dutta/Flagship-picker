@@ -61,147 +61,147 @@ const expandedText =
 const cardData = [
 
     {
-        title: "The Vision",
-        text: "A simple idea can become something extraordinary when you know how to present it.",
-        image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+        title: "Phone with Unlimited Recharge",
+        text: "CURVEBALL : You can call anyone but will receive calls only from the people you hate.",
+        image: "mobile with unlimited.png"
     },
 
     {
-        title: "The Product",
-        text: "Every great pitch begins with a product that solves a real problem.",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
+        title: "Headphones with unlimited battery",
+        text: "CURVEBALL : You can use without charging but Plays a 30 second’s unskippable ad after every song.",
+        image: "unlimited headphone.png"
     },
 
     {
-        title: "The Idea",
-        text: "Turn an ordinary thought into an idea people cannot ignore.",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80"
+        title: "Dream Recorder",
+        text: "CURVEBALL : You can record and store the Happiest dreams, but the dream you record will never happen with you in real life.",
+        image: "dream recorder.png"
     },
 
     {
-        title: "The Founder",
-        text: "People don't just buy products. They buy the confidence of the person presenting them.",
-        image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+        title: "Bagpack with infinite space",
+        text: "CURVEBALL : You can put anything inside, but you can only take out one thing per day.",
+        image: "unlimited bagpack.png"
     },
 
     {
-        title: "The Market",
-        text: "Know who needs your product and why they should care about it.",
-        image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=900&q=80"
+        title: "Smart AI Refrigerator",
+        text: "CURVEBALL : It knows exactly what you want to eat but refuses to open until you choose something healthy.",
+        image: "smart ai fridge.png"
     },
 
     {
-        title: "The Strategy",
-        text: "A strong pitch turns a good idea into a believable opportunity.",
-        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+        title: "Food Coupon With Unlimited Uses",
+        text: "CURVEBALL : But it makes you obsese for three days, everytime you order with it.",
+        image: "unlimited food coupon.png"
     },
 
     {
-        title: "The Challenge",
-        text: "Great businesses are built by solving problems that people actually have.",
-        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+        title: "Spectacles that read people's minds.",
+        text: "CURVEBALL : But you can only apply it on unhealthy foods.",
+        image: "magical spectacles.png"
     },
 
     {
-        title: "The Brand",
-        text: "A memorable product deserves a memorable identity.",
-        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
+        title: "Magical Perfume that makes everyone trust you.",
+        text: "CURVEBALL : It has a distinct, lingering undertone of onions.",
+        image: "magical perfume.png"
     },
 
     {
-        title: "The Customer",
-        text: "Build for the person who will actually use what you create.",
-        image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+        title: "WiFi Enabled Socks",
+        text: "CURVEBALL : Socks that track your steps but disconnected from WiFi if feet smells too bad",
+        image: "wifi socks.png"
     },
 
     {
-        title: "The Story",
-        text: "Facts explain your product. A story makes people remember it.",
-        image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=80"
+        title: "Magical Hairdryer that gives perfect hairstyle",
+        text: "CURVEBALL : Changes the hairstyle when someone compliments you.",
+        image: "magical hairdryer.png"
     },
 
     {
-        title: "The Pitch",
-        text: "You have limited time. Make every second of your pitch count.",
-        image: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=900&q=80"
+        title: "Magical Elevator that takes you anywhere.",
+        text: "CURVEBALL : Takes you anywhere instantly, but you have to explain to it why you deserve to go there.",
+        image: "anywhere elevator.png"
     },
 
     {
-        title: "The Team",
-        text: "A powerful idea becomes stronger when the right people build it together.",
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+        title: "The Magic Camera That automatically stores happy moments from your life.",
+        text: "CURVEBALL : But it cannot capture a moment while you are aware that it is happening.",
+        image: "magical camera.png"
     },
 
     {
-        title: "The Future",
-        text: "Don't just explain what exists. Show people what could exist.",
-        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"
+        title: "Smart Wallet that automatically tracks your spending and saves money",
+        text: "CURVEBALL: But it refuses to let you spend money on things it considers unnecessary.",
+        image: "smart wallet.png"
     },
 
     {
-        title: "The Risk",
-        text: "Every ambitious idea carries risk. The job is to show why it is worth taking.",
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+        title: "AI Dating app that gurantees you a partner",
+        text: "CURVEBALL: It never tells you why you were matched with them.",
+        image: "ai dating app.png"
     },
 
     {
-        title: "The Opportunity",
-        text: "The best pitches make an opportunity feel impossible to ignore.",
-        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
+        title: "A bed which gives you perfect sleep",
+        text: "CURVEBALL : Gives you perfect sleep , but before letting you sleep, it replays your most embarrassing moment of the day.",
+        image: "magic bed.png"
     },
 
     {
-        title: "The Solution",
-        text: "A product matters when it provides a solution that is better than the alternatives.",
-        image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80"
+        title: "A Water Bottle that never runs out",
+        text: "CURVEBALL : Every time it refills, someone somewhere loses the same amount of water.",
+        image: "Magical bottle.png"
     },
 
     {
-        title: "The Problem",
-        text: "Before selling your solution, make the audience understand the problem.",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+        title: "T-shirt that changes color with your mood",
+        text: "CURVEBALL: It reveals your real mood even when you're trying to hide it.",
+        image: "magical tshirt.png"
     },
 
     {
-        title: "The Value",
-        text: "If your audience cannot understand the value, the pitch has already failed.",
-        image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=900&q=80"
+        title: "MAGIC MIRROR that gives feedback on how you look",
+        text: "CURVEBALL: It gives brutally honest feedback whenever you disagree with it.",
+        image: "magic mirror.png"
     },
 
     {
-        title: "The Impact",
-        text: "The strongest ideas create value beyond the person who invented them.",
-        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80"
+        title: "A bicycle that never tires you out",
+        text: "CURVEBALL: The faster you pedal, the harder it becomes to control the bicycle.",
+        image: "cycle.png"
     },
 
     {
-        title: "The Edge",
-        text: "What makes your idea different? That difference is your competitive edge.",
-        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80"
+        title: "Phone that automatically deletes unnecessary photos",
+        text: "CURVEBALL: It decides which photos are unnecessary based on whether you remember taking them.",
+        image: "auto deleter.png"
     },
 
     {
-        title: "The Growth",
-        text: "A good product gets attention. A scalable product creates lasting growth.",
-        image: "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=900&q=80"
+        title: "A Doorbell That Identifies Visitors",
+        text: "CURVEBALL : It tells you who is outside but also tells them exactly what you're doing inside.",
+        image: "doorbell.png"
     },
 
     {
-        title: "The Money",
-        text: "A business needs more than an exciting idea. It needs a path to making money.",
-        image: "https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=900&q=80"
+        title: "Smart Spoon That Counts Calories",
+        text: "CURVEBALL : It counts calories only after you've swallowed the food.",
+        image: "spoon.png"
     },
 
     {
-        title: "The Moment",
-        text: "Sometimes one well-timed pitch is enough to change everything.",
-        image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=80"
+        title: "A toothbrush that guarantees perfect dental health.",
+        text: "CURVEBALL : It refuses to stop brushing until it thinks your teeth are clean.",
+        image: "brush.png"
     },
 
     {
-        title: "The Winner",
-        text: "The winning pitch is the one people remember after everyone else has stopped talking.",
-        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+        title: "A suitcase that can hold an unlimited amount of luggage without getting heavier.",
+        text: "CURVEBALL: You can only take things out at your destination.",
+        image: "suitcase.png"
     }
 
 ];
